@@ -1,0 +1,54 @@
+1.Install Arista veos instance on a virual box
+
+https://www.arista.com/en/support/software-download
+
+
+(requires a free account. I use the Aboot-veos-2.1.0.iso and vEOS-lab-4.13.14M files in this course)
+Note! The Arista vEOS VM credentials: username: admin , password: none
+
+https://eos.arista.com/securing-eos-cli/
+
+Pretty simple installaion. Make sure to remove the unncessary memory and Slots, as we dont need it.
+
+NOTE:
+
+1. Do not forget to the turn of off the connectiviy setting of the veos VM as by default the reacability is
+
+2.Install cisco's CSR1kv on a virtual box . The image can be downloaded at this location,
+
+https://software.cisco.com/download/release.html?mdfid=284364978&softwareid=282046477&release=3.12.0S&flowid=39582
+
+Look for the .iso as we are going to install the instance in the virtual box.
+
+csr1000v-universalk9.03.12.00.S.154-2.S-std.iso
+
+3.Configure the VM's in the Bridge mode so that you can connect the devices via the python modules within the box.
+
+4. Configure a management IP's so that you can reach the devices using the script connect().
+
+
+Napalm Info:
+
+https://github.com/napalm-automation/napalm
+
+Here is the GIt repo for the entire NAPALM repo.
+
+https://www.youtube.com/watch?v=93q-dHC0u0I&feature=youtu.be
+
+Live demo of NAPALM . NAPALM was developed by spotify engineers for their network management.
+
+
+What we have done:
+
+Currently we are performing the following functionalities in our project
+    - load config from a file which is kept locally (device.load_
+    - compare the running config with the loaded config (device.compare())
+    - Based on the comparison ,prompt the user a choice to whether to discard or commit configs (device.compare())
+    - Discard the config by using device.discard()
+    - Commit the config by using device.commit()
+    - Additionally we can do a rollback of the configs using device.rollback()
+
+
+
+
+
